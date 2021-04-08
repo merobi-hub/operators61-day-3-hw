@@ -1,0 +1,48 @@
+html, body{
+    height: 100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: [1] minmax(0px,2fr) [2] minmax(0px,2fr) [3] minmax(0px,2fr) [4] minmax(0px,2fr) [5];
+    grid-template-rows: 25% auto 10%;
+    grid-template-areas:
+        "header header header sidenav"
+        "content1 content1 content2 sidenav"
+        "footer footer footer footer";
+    height: 100%;  
+    grid-auto-flow: column;
+}
+
+.header{
+    grid-area: header;
+    background-color: gray;
+}
+
+.sidenav{
+    grid-area: sidenav;
+    background-color: gray;
+}
+
+.content1{
+    grid-area: content1;
+    font-size: larger;
+    color: white;
+    background-color: gray;
+    grid-template-columns: repeat(auto-fill, minmax(0px, 2fr))
+}
+
+.content2{
+    grid-area: content2;
+    background-color: gray;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: gray;
+}
+
+.header,.sidenav,.content1,.content2,.footer{
+    padding: 3em;
+    border: 1px solid #eee;
+}
