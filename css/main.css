@@ -26,10 +26,12 @@ html, body{
 
 .content1{
     grid-area: content1;
-    font-size: larger;
-    color: white;
     background-color: gray;
-    grid-template-columns: repeat(auto-fill, minmax(0px, 2fr))
+}
+
+.content2 p {
+    z-index: 2;
+    position: absolute;
 }
 
 .content2{
